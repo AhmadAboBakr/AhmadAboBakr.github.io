@@ -1,0 +1,403 @@
+/* Print Styles for Resume */
+@media print {
+    /* Reset and base styles */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    body {
+        background: white !important;
+        color: #333 !important;
+        font-size: 12pt !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        padding: 20px !important;
+    }
+    
+    /* Hide non-essential elements */
+    .navbar,
+    .hero-section,
+    .floating-card,
+    .scroll-indicator,
+    .back-to-top,
+    .social-links,
+    .download-btn,
+    .print-btn {
+        display: none !important;
+    }
+    
+    /* Resume container */
+    .resume-container {
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    
+    /* Two column layout for print - 30% left, 70% right */
+    .resume-grid {
+        display: grid !important;
+        grid-template-columns: 30% 70% !important;
+        gap: 20px !important;
+        align-items: start !important;
+    }
+    
+    .resume-left {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .resume-right {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Header section */
+    .resume-header {
+        text-align: left !important;
+        margin-bottom: 30px !important;
+        padding: 0 !important;
+        background: none !important;
+    }
+    
+    .resume-header h1 {
+        font-size: 28pt !important;
+        color: #333 !important;
+        margin: 0 0 10px 0 !important;
+        text-shadow: none !important;
+    }
+    
+    .resume-header .title {
+        font-size: 16pt !important;
+        color: #666 !important;
+        margin: 0 0 20px 0 !important;
+    }
+    
+    /* Contact information - full width below title */
+    .contact-info {
+        display: block !important;
+        margin: 15px 0 25px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        width: 100% !important;
+        grid-column: 1 / -1 !important;
+    }
+    
+    .contact-info p {
+        margin: 5px 0 !important;
+        font-size: 11pt !important;
+        color: #333 !important;
+    }
+    
+    /* Contact list styling for print */
+    .contact-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+    }
+    
+    .contact-item {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    
+    .contact-item i {
+        color: #666 !important;
+        font-size: 11pt !important;
+    }
+    
+    .contact-item a,
+    .contact-item span {
+        color: #333 !important;
+        font-size: 11pt !important;
+        text-decoration: none !important;
+    }
+    
+    /* Section styling */
+    .resume-section {
+        margin: 20px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    /* Remove all decorative borders and backgrounds */
+    .section-title {
+        background: none !important;
+        border: none !important;
+        padding: 0 0 8px 0 !important;
+        margin: 0 0 15px 0 !important;
+        color: #333 !important;
+        font-size: 16pt !important;
+        font-weight: 600 !important;
+    }
+    
+    .section-title i {
+        color: #666 !important;
+        margin-right: 8px !important;
+    }
+    
+    .resume-section h2 {
+        font-size: 18pt !important;
+        color: #333 !important;
+        margin: 0 0 15px 0 !important;
+        padding: 0 0 5px 0 !important;
+        border-bottom: 1px solid #ccc !important;
+        text-shadow: none !important;
+    }
+    
+    /* Skills section */
+    .skills-grid {
+        display: block !important;
+        margin: 0 !important;
+    }
+    
+    .skill-category {
+        margin: 10px 0 !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .skill-category h3 {
+        font-size: 12pt !important;
+        color: #333 !important;
+        margin: 0 0 6px 0 !important;
+    }
+    
+    .skill-tags {
+        display: block !important;
+        margin: 0 !important;
+    }
+    
+    .skill-tag {
+        display: inline-block !important;
+        background: #f0f0f0 !important;
+        color: #333 !important;
+        padding: 2px 6px !important;
+        margin: 1px 3px 1px 0 !important;
+        border-radius: 2px !important;
+        font-size: 9pt !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    /* Experience timeline */
+    .timeline {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .timeline-item {
+        margin: 15px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .timeline-item::before {
+        display: none !important;
+    }
+    
+    .timeline-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+    }
+    
+    .timeline-content h3 {
+        font-size: 14pt !important;
+        color: #333 !important;
+        margin: 0 0 5px 0 !important;
+    }
+    
+    .timeline-content .company {
+        font-size: 12pt !important;
+        color: #666 !important;
+        margin: 0 0 5px 0 !important;
+    }
+    
+    .timeline-content .period {
+        font-size: 11pt !important;
+        color: #888 !important;
+        margin: 0 0 10px 0 !important;
+    }
+    
+    .timeline-content ul {
+        margin: 8px 0 !important;
+        padding-left: 18px !important;
+    }
+    
+    .timeline-content li {
+        font-size: 11pt !important;
+        margin: 2px 0 !important;
+        color: #333 !important;
+    }
+    
+    /* Education section */
+    .education-item {
+        margin: 12px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .education-item h3 {
+        font-size: 14pt !important;
+        color: #333 !important;
+        margin: 0 0 5px 0 !important;
+    }
+    
+    .education-item .institution {
+        font-size: 12pt !important;
+        color: #666 !important;
+        margin: 0 0 5px 0 !important;
+    }
+    
+    .education-item .period {
+        font-size: 11pt !important;
+        color: #888 !important;
+        margin: 0 0 5px 0 !important;
+    }
+    
+    /* Certifications */
+    .certifications-list {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .certification-item {
+        margin: 8px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .certification-item h4 {
+        font-size: 11pt !important;
+        color: #333 !important;
+        margin: 0 0 3px 0 !important;
+    }
+    
+    .certification-item .issuer {
+        font-size: 11pt !important;
+        color: #666 !important;
+        margin: 0 0 3px 0 !important;
+    }
+    
+    .certification-item .date {
+        font-size: 10pt !important;
+        color: #888 !important;
+        margin: 0 !important;
+    }
+    
+    /* Languages */
+    .languages-list {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .language-item {
+        margin: 6px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+    }
+    
+    .language-item h4 {
+        font-size: 11pt !important;
+        color: #333 !important;
+        margin: 0 0 3px 0 !important;
+    }
+    
+    .language-item .level {
+        font-size: 11pt !important;
+        color: #666 !important;
+        margin: 0 !important;
+    }
+    
+    /* Page breaks */
+    .resume-section {
+        page-break-inside: avoid !important;
+    }
+    
+    .timeline-item,
+    .education-item,
+    .certification-item {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Links */
+    a {
+        color: #333 !important;
+        text-decoration: none !important;
+    }
+    
+    /* Remove animations and shadows */
+    * {
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Remove any remaining decorative elements */
+    .resume-header,
+    .resume-content,
+    .resume-grid,
+    .resume-left,
+    .resume-right {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Clean up any remaining colored elements */
+    .btn,
+    .btn-primary,
+    .btn-secondary {
+        background: none !important;
+        border: none !important;
+        color: #333 !important;
+        text-decoration: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Ensure good contrast */
+    .resume-container {
+        color: #000 !important;
+    }
+    
+    /* Footer */
+    .resume-footer {
+        margin-top: 30px !important;
+        padding: 0 !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        color: #666 !important;
+        border-top: 1px solid #ddd !important;
+        padding-top: 10px !important;
+    }
+} 
