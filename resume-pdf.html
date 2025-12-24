@@ -25,7 +25,6 @@
             max-width: 210mm;
             margin: 20px auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
             display: grid;
             grid-template-columns: 1fr 2fr;
             min-height: 297mm;
@@ -35,7 +34,7 @@
         .sidebar {
             background: #2c3e50;
             color: white;
-            padding: 40px 30px;
+            padding: 40px 15px;
         }
 
         .profile-section {
@@ -44,28 +43,28 @@
         }
 
         .profile-section h1 {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
             color: #ecf0f1;
         }
 
         .profile-section h2 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
             color: #bdc3c7;
             margin-bottom: 20px;
         }
 
         .contact-info {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-            font-size: 14px;
+            margin-bottom: 10px;
+            font-size: 12px;
         }
 
         .contact-item i {
@@ -79,12 +78,9 @@
             text-decoration: none;
         }
 
-        .contact-item a:hover {
-            color: #3498db;
-        }
 
         .section-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             margin-bottom: 20px;
             color: #ecf0f1;
@@ -93,15 +89,15 @@
         }
 
         .skills-section {
-            margin-bottom: 30px;
-        }
-
-        .skill-category {
             margin-bottom: 20px;
         }
 
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
         .skill-category h3 {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             margin-bottom: 10px;
             color: #bdc3c7;
@@ -117,9 +113,30 @@
             background: #34495e;
             color: #ecf0f1;
             padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            border: 1px solid #3498db;
+            font-size: 10px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .resume-container {
+                margin: 0;
+                box-shadow: none;
+            }
+
+            @page {
+                margin: 0;
+                size: A4;
+            }
+        }
+
+        @media screen {
+            .resume-container {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
         }
 
         .certifications-section {
@@ -131,20 +148,20 @@
         }
 
         .certification-item h4 {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             margin-bottom: 5px;
             color: #ecf0f1;
         }
 
         .certification-item p {
-            font-size: 12px;
+            font-size: 10px;
             color: #bdc3c7;
             margin-bottom: 3px;
         }
 
         .certification-item .date {
-            font-size: 11px;
+            font-size: 9px;
             color: #95a5a6;
         }
 
@@ -157,14 +174,14 @@
         }
 
         .language-item h4 {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             margin-bottom: 3px;
             color: #ecf0f1;
         }
 
         .language-item .level {
-            font-size: 12px;
+            font-size: 10px;
             color: #bdc3c7;
         }
 
@@ -178,7 +195,7 @@
         }
 
         .content-section h2 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             margin-bottom: 20px;
             color: #2c3e50;
@@ -187,15 +204,16 @@
         }
 
         .summary-text {
-            font-size: 15px;
+            font-size: 13px;
             line-height: 1.7;
             color: #555;
         }
 
         .experience-item {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
             border-bottom: 1px solid #ecf0f1;
+            page-break-inside: avoid;
         }
 
         .experience-item:last-child {
@@ -207,21 +225,33 @@
         }
 
         .experience-header h3 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 5px;
         }
 
         .experience-header .company {
-            font-size: 14px;
+            font-size: 12px;
             color: #3498db;
             font-weight: 500;
             margin-bottom: 3px;
         }
 
+        .position-header {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 10px;
+            margin-bottom: 6px;
+        }
+
+        .position-header:first-of-type {
+            margin-top: 0;
+        }
+
         .experience-header .period {
-            font-size: 13px;
+            font-size: 11px;
             color: #7f8c8d;
             font-style: italic;
         }
@@ -231,32 +261,33 @@
         }
 
         .experience-content li {
-            font-size: 14px;
+            font-size: 12px;
             color: #555;
             margin-bottom: 6px;
             line-height: 1.5;
         }
 
         .education-item {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
+            page-break-inside: avoid;
         }
 
         .education-item h3 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 5px;
         }
 
         .education-item .institution {
-            font-size: 12px;
+            font-size: 10px;
             color: #3498db;
             font-weight: 500;
             margin-bottom: 3px;
         }
 
         .education-item .period {
-            font-size: 13px;
+            font-size: 11px;
             color: #7f8c8d;
             font-style: italic;
         }
@@ -267,14 +298,13 @@
                 background: white;
                 margin: 0;
                 padding: 0;
-                font-size: 11pt !important;
+                font-size: 9pt !important;
                 line-height: 1.4 !important;
             }
 
             .resume-container {
                 max-width: none;
                 margin: 0;
-                box-shadow: none;
                 grid-template-columns: 1fr 2fr;
                 min-height: auto;
             }
@@ -283,87 +313,89 @@
                 background: #2c3e50 !important;
                 color: white !important;
                 padding: 25px 15px;
+                order: 1 !important;
             }
 
             .main-content {
                 padding: 25px 15px;
+                order: 2 !important;
             }
 
             .profile-section h1 {
-                font-size: 24pt !important;
+                font-size: 22pt !important;
             }
 
             .profile-section h2 {
-                font-size: 14pt !important;
+                font-size: 12pt !important;
             }
 
             .section-title {
-                font-size: 16pt !important;
+                font-size: 14pt !important;
                 border-bottom: 2px solid #3498db !important;
             }
 
             .content-section h2 {
-                font-size: 18pt !important;
+                font-size: 16pt !important;
                 border-bottom: 2px solid #3498db !important;
             }
 
             .skill-category h3 {
-                font-size: 12pt !important;
+                font-size: 10pt !important;
             }
 
             .skill-tag {
                 background: #34495e !important;
                 color: #ecf0f1 !important;
-                border: 1px solid #3498db !important;
-                font-size: 10pt !important;
+                font-size: 8pt !important;
                 padding: 3px 6px !important;
+                border-radius: 0 !important;
             }
 
             .certification-item h4,
             .language-item h4 {
-                font-size: 12pt !important;
+                font-size: 10pt !important;
             }
 
             .certification-item p,
             .language-item .level {
-                font-size: 10pt !important;
+                font-size: 8pt !important;
             }
 
             .experience-header h3 {
-                font-size: 14pt !important;
-            }
-
-            .experience-header .company {
                 font-size: 12pt !important;
             }
 
+            .experience-header .company {
+                font-size: 10pt !important;
+            }
+
             .experience-header .period {
-                font-size: 11pt !important;
+                font-size: 9pt !important;
             }
 
             .experience-content li {
-                font-size: 11pt !important;
+                font-size: 9pt !important;
                 margin-bottom: 4px !important;
             }
 
             .summary-text {
-                font-size: 12pt !important;
+                font-size: 10pt !important;
             }
 
             .education-item h3 {
-                font-size: 14pt !important;
+                font-size: 12pt !important;
             }
 
             .education-item .institution {
-                font-size: 13pt !important;
+                font-size: 11pt !important;
             }
 
             .education-item .period {
-                font-size: 11pt !important;
+                font-size: 9pt !important;
             }
 
             .contact-item {
-                font-size: 11pt !important;
+                font-size: 9pt !important;
                 margin-bottom: 12px !important;
             }
 
@@ -385,8 +417,8 @@
             }
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
+        /* Responsive - Only for screen, not print */
+        @media screen and (max-width: 768px) {
             .resume-container {
                 grid-template-columns: 1fr;
                 margin: 10px;
@@ -408,8 +440,8 @@
         <div class="sidebar">
             <!-- Profile Section -->
             <div class="profile-section">
-                <h1>Ahmad AboBakr</h1>
-                <h2>Game & VR Developer</h2>
+                <h1>Ahmad Abdallah</h1>
+                <h2>Game Development & XR Education Leader</h2>
             </div>
 
             <!-- Contact Information -->
@@ -417,11 +449,11 @@
                 <div class="section-title">Contact</div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:ahmadabobakr@gmail.com">ahmadabobakr@gmail.com</a>
+                    <span>ahmadabobakr@gmail.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+971585149513">+971 58 514 9513</a>
+                    <span>+971 58 514 9513</span>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
@@ -432,8 +464,8 @@
                     <a href="https://ahmadabobakr.github.io" target="_blank">ahmadabobakr.github.io</a>
                 </div>
                 <div class="contact-item">
-                    <i class="fab fa-unity"></i>
-                    <a href="https://assetstore.unity.com/publishers/36568" target="_blank">Unity Asset Store Publisher</a>
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>MSc Virtual Reality  Design</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -463,7 +495,6 @@
                         <span class="skill-tag">HTML/CSS</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Web Technologies</span>
                     </div>
                 </div>
 
@@ -494,7 +525,6 @@
                 <div class="certification-item">
                     <h4>Unity Certified Expert: Programmer</h4>
                     <p>Unity Technologies</p>
-                    <span class="date">Current</span>
                 </div>
             </div>
 
@@ -503,11 +533,36 @@
                 <div class="section-title">Languages</div>
                 <div class="language-item">
                     <h4>English</h4>
-                    <div class="level">Native/Bilingual</div>
+                    <span class="level">Native/Bilingual</span>
                 </div>
                 <div class="language-item">
                     <h4>Arabic</h4>
-                    <div class="level">Native/Bilingual</div>
+                    <span class="level">Native/Bilingual</span>
+                </div>
+            </div>
+
+            <!-- Awards Section -->
+            <div class="languages-section" style="margin-top: 20px;">
+                <div class="section-title">Awards & Recognition</div>
+                <div class="language-item">
+                    <h4>Best Game - Global Game Jam</h4>
+                    <div class="level">2017, 2018</div>
+                </div>
+                <div class="language-item">
+                    <h4>Finalist - Microsoft Imagine Cup</h4>
+                    <div class="level">Games Category, 2014</div>
+                </div>
+                <div class="language-item">
+                    <h4>ICPC-ANARAC Participant</h4>
+                    <div class="level">2008</div>
+                </div>
+                <div class="language-item">
+                    <h4>Crypto Labs Bridge Program</h4>
+                    <div class="level">Accepted</div>
+                </div>
+                <div class="language-item">
+                    <h4>Global Game Jam Judge</h4>
+                    <div class="level">2019, 2022, 2023, 2024</div>
                 </div>
             </div>
         </div>
@@ -518,10 +573,7 @@
             <div class="content-section">
                 <h2>Professional Summary</h2>
                 <p class="summary-text">
-                    Experienced Game and VR Developer with over 15 years of expertise in Unity development, 
-                    VR/AR technologies, and educational leadership. Currently serving as Head of Games Development 
-                    & VR Department at SAE University College, leading educational programs and mentoring the next 
-                    generation of game developers.
+                    Game development professional with 13+ years specializing in Unity, XR, and interactive experiences. Master's in VR  Design, and Unity Certified Expert, currently leading academic programs and developing educational technology.
                 </p>
             </div>
 
@@ -531,30 +583,54 @@
                 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <h3>Head of Games Development & VR Department</h3>
-                        <div class="company">SAE University College (2023 - Present)</div>
+                        <h3>SAE University College</h3>
+                        <div class="company">2019 - Present</div>
                     </div>
                     <div class="experience-content">
+                        <div class="position-header">Head of Games Development & XR Department (2023 - Present)</div>
                         <ul>
-                            <li>Lead the Games Development and VR department, overseeing curriculum development and program delivery</li>
-                            <li>Mentor students in game development, VR/AR technologies, and Unity programming</li>
-                            <li>Develop and implement innovative teaching methodologies for interactive media education</li>
-                            <li>Collaborate with industry partners to ensure curriculum relevance and student employability</li>
+                            <li>Lead strategic direction for Games Development and XR programs, overseeing curriculum and faculty development</li>
+                            <li>Manage department operations and student success initiatives</li>
+                            <li>Establish industry partnerships to enhance graduate employability</li>
+                        </ul>
+                        
+                        <div class="position-header">Part-Time Lecturer (2021 - 2022)</div>
+                        <ul>
+                            <li>Delivered specialized courses in Unity development and VR technologies</li>
+                        </ul>
+                        
+                        <div class="position-header">Game Development Instructor (2019 - 2021)</div>
+                        <ul>
+                            <li>Taught comprehensive courses in Unity, C#, game design, and interactive storytelling</li>
+                            <li>Mentored students in developing portfolio-quality projects</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <h3>Senior Unity Developer</h3>
+                        <h3>Co-Founder & CEO</h3>
+                        <div class="company">Shababeek Labs (2024 - Present)</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Founded educational technology company focused on game-based learning and interactive educational experiences</li>
+                            <li>Lead product development and technical strategy for innovative learning platforms and XR educational tools</li>
+                            <li>Build and manage cross-functional team of developers, educators, and designers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>XR Consultant</h3>
                         <div class="company">Toptal (2022 - Present)</div>
                     </div>
                     <div class="experience-content">
                         <ul>
-                            <li>Developed high-quality Unity applications and games for various clients</li>
-                            <li>Implemented advanced VR/AR features and optimizations</li>
-                            <li>Provided technical consulting and code reviews for Unity projects</li>
-                            <li>Collaborated with cross-functional teams to deliver innovative solutions</li>
+                            <li>Guide development teams through VR/AR technology adoption and integration</li>
+                            <li>Design scalable project architectures for complex XR applications</li>
+                            <li>Lead technical reskilling initiatives helping traditional game teams transition to VR development</li>
                         </ul>
                     </div>
                 </div>
@@ -566,26 +642,9 @@
                     </div>
                     <div class="experience-content">
                         <ul>
-                            <li>Developed immersive VR experiences and applications</li>
-                            <li>Implemented advanced hand tracking and interaction systems</li>
-                            <li>Optimized VR performance and user experience</li>
-                            <li>Collaborated with design teams to create engaging virtual environments</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Game Development Instructor</h3>
-                        <div class="company">SAE Institute Dubai (2019 - 2021)</div>
-                    </div>
-                    <div class="experience-content">
-                        <ul>
-                            <li>Taught Unity development, C# programming, game design principles, and interactive storytelling</li>
-                            <li>Instructed students in game mechanics, level design, user experience, and creative game development</li>
-                            <li>Developed comprehensive course materials and practical exercises covering both technical and creative aspects</li>
-                            <li>Mentored students in creating portfolio-worthy game projects with strong design foundations</li>
-                            <li>Organized workshops and industry networking events</li>
+                            <li>Architected core VR framework and Web3 integration for metaverse platform</li>
+                            <li>Designed interaction system enabling designers to create complex experiences without developer intervention</li>
+                            <li>Established scalable technical architecture supporting rapid feature development</li>
                         </ul>
                     </div>
                 </div>
@@ -593,30 +652,33 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <h3>Lead Game Developer</h3>
-                        <div class="company">Kandooz Studio (2017 - 2020)</div>
+                        <div class="company">Kandooz Studio (2017 - 2021)</div>
                     </div>
                     <div class="experience-content">
                         <ul>
-                            <li>Led development of multiple Unity-based games and applications</li>
-                            <li>Developed the Kinteraction system for VR hand interactions</li>
-                            <li>Published successful assets on the Unity Asset Store</li>
-                            <li>Managed development team and project timelines</li>
-                            <li>Handled client negotiations and project requirements</li>
+                            <li>Led development of Unity-based commercial games and applications from concept to launch</li>
+                            <li>Published successful assets on Unity Asset Store serving thousands of developers</li>
+                            <li>Managed team workflows, code quality, and project delivery timelines</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <h3>Game Development Technical Supervisor</h3>
-                        <div class="company">Information Technology Institute (2014 - 2018)</div>
+                        <h3>Information Technology Institute (ITI)</h3>
+                        <div class="company">2014 - 2019</div>
                     </div>
                     <div class="experience-content">
+                        <div class="position-header">Part-Time Lecturer (2018 - 2019)</div>
                         <ul>
-                            <li>Supervised game development programs and curriculum</li>
-                            <li>Taught advanced topics including Unity Game Engine, Computer Graphics using DirectX, and C# programming</li>
-                            <li>Mentored students and supervised technical projects</li>
-                            <li>Developed comprehensive educational materials and practical exercises</li>
+                            <li>Delivered advanced courses in Unity development and computer graphics programming</li>
+                        </ul>
+                        
+                        <div class="position-header">Game Development Technical Supervisor (2014 - 2018)</div>
+                        <ul>
+                            <li>Supervised game development curriculum covering Unity, DirectX, OpenGL, and C#</li>
+                            <li>Developed educational materials bridging academic concepts with industry practices</li>
+                            <li>Mentored students through capstone projects</li>
                         </ul>
                     </div>
                 </div>
@@ -628,10 +690,7 @@
                     </div>
                     <div class="experience-content">
                         <ul>
-                            <li>Developed websites and web applications using HTML, CSS, JavaScript, and Node.js</li>
-                            <li>Created responsive designs and user-friendly interfaces</li>
-                            <li>Implemented database solutions and content management systems</li>
-                            <li>Provided technical support and maintenance for web projects</li>
+                            <li>Developed backend systems using Node.js and PHP (Laravel) with MySQL and MongoDB</li>
                         </ul>
                     </div>
                 </div>
@@ -641,23 +700,26 @@
             <div class="content-section">
                 <h2>Education</h2>
                 <div class="education-item">
-                    <h3>Master of Science - Professional Practice in Virtual Reality Experience Design</h3>
-                    <div class="institution">Middlesex University (2023)</div>
+                    <h3>MSc Virtual Reality Experience Design</h3>
+                    <div class="institution">Middlesex University | 2023</div>
                 </div>
+
                 <div class="education-item">
-                    <h3>Postgraduate Degree - Computer Engineering</h3>
-                    <div class="institution">Arab Academy for Science, Technology and Maritime Transport (2017)</div>
+                    <h3>Postgraduate Diploma Computer Engineering</h3>
+                    <div class="institution">Arab Academy for Science, Technology and Maritime Transport | 2017</div>
                 </div>
+
                 <div class="education-item">
-                    <h3>Post Graduate Diploma - Game Development</h3>
-                    <div class="institution">Information Technology Institute (ITI) (2015)</div>
+                    <h3>Postgraduate Diploma - Game Development</h3>
+                    <div class="institution">Information Technology Institute (ITI) | 2015</div>
                 </div>
+
                 <div class="education-item">
-                    <h3>Bachelor's Degree - Computer Engineering</h3>
-                    <div class="institution">Modern Academy Maadi (2011)</div>
+                    <h3>BSc In Computer Engineering</h3>
+                    <div class="institution">Modern academy For Engineering and Technology | 2011</div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-</html> 
+</html>
